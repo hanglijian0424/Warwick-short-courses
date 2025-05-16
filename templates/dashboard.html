@@ -1,0 +1,39 @@
+<!-- dashboard.html: Admin dashboard listing all applications --><!-- Chatgpt generated this part of code -->
+{% extends "base.html" %}
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Application Submissions</h2>
+
+<!-- Responsive Bootstrap table of application data -->
+<table class="table table-bordered table-striped">
+    <thead class="table-light">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Time</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Loop through each application -->
+        {% for app in applications %}
+        <tr>
+            <td>{{ app[0] }}</td>
+            <td>{{ app[1] }}</td>
+            <td>{{ app[2] }}</td>
+            <td>{{ app[4] }}</td>
+            <td>{{ app[5] }}</td>
+            <td>
+                <!-- Link to view detailed page --><!-- Chatgpt generated this part of code -->
+                <a href="/admin/view/{{ app[0] }}" class="btn btn-sm btn-info">View</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="/logout" class="btn btn-secondary">Logout</a>
+{% endblock %}

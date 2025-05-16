@@ -1,0 +1,12 @@
+<!-- email.html: Preview of acceptance or rejection message --> <!-- Chatgpt generated -->
+{% extends "base.html" %}
+{% block title %}Email Preview{% endblock %}
+
+{% block content %}
+<h3>Email Preview for: {{ email }}</h3>
+
+<!-- Show generated email message -->
+<pre class="bg-white p-3 rounded shadow-sm">{{ message }}</pre>
+
+<a href="/admin/dashboard" class="btn btn-primary mt-3">Back to Dashboard</a>
+{% endblock %}

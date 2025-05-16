@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Check Status{% endblock %}
+{% block content %}
+<h2 class="mb-4">Check Your Application</h2>
+<form method="POST">
+    <div class="mb-3">
+     <label for="email" class="form-label">Enter your email address:</label>
+     <input type="email" id="email" name="email" class="form-control" required>
+    </div>
+    <button class="btn btn-primary">Check Status</button>
+</form>
+{% endblock %}

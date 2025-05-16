@@ -1,0 +1,53 @@
+<!-- base.html: Shared layout template for all pages -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Warwick Courses{% endblock %}</title>
+    <!-- Import Bootstrap for responsive design --><!-- chatgpt generated this part of code -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link custom stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-light">
+
+    <!-- Navigation bar shared across all pages --> <!-- Chatgpt generated -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="/">
+  <img src="{{ url_for('static', filename='logo.png') }}"
+     alt="Warwick Logo"
+     width="90"
+     height="78"
+     class="me-2 rounded-circle"
+     style="transition: opacity 0.2s;"
+     onmouseover="this.style.opacity='0.8'"
+     onmouseout="this.style.opacity='1'">
+  Warwick Short Courses
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/apply">Apply</a></li>
+         <li class="nav-item"><a class="nav-link" href="/check">Check</a></li>
+        <li class="nav-item"><a class="nav-link" href="/login">Admin</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <!-- Main page content injected from child templates -->
+    <main class="container pb-5">
+        {% block content %}{% endblock %}
+    </main>
+<!-- Footer -->
+<footer class="bg-dark text-white mt-5">
+     <div class="container py-3 text-center">
+    <p class="mb-1">University of Warwick, Coventry CV4 7AL, United Kingdom</p>
+    <p class="mb-1">Email: <a href="mailto:shortcourses@warwick.ac.uk">shortcourses@warwick.ac.uk</a></p>
+    <p class="small mb-0">&copy; 2025 Warwick Short Courses|Designed by Lijian Hang. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

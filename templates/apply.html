@@ -1,0 +1,35 @@
+<!-- apply.html: Application form page --> <!-- Chatgpt generated -->
+{% extends "base.html" %}
+{% block title %}Apply{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Apply for a Short Course</h2>
+
+<!-- Form to collect user's name, email, class selection and statement -->
+<form method="POST" action="/apply">
+    <div class="mb-3">
+        <label class="form-label">Full Name</label>
+        <input type="text" name="name" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Email Address</label>
+        <input type="email" name="email" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Personal Statement</label>
+        <textarea name="statement" class="form-control" rows="4" required></textarea>
+    </div>
+    <div class="mb-3">
+  <label class="form-label">Select a Course</label>
+  <select name="course_name" class="form-select" required>
+    <option value="">-- Choose a course --</option>
+    <option value="AI and Data Science">AI and Data Science</option>
+    <option value="Business Strategy">Business Strategy</option>
+    <option value="Climate & Policy">Climate & Policy</option>
+  </select>
+</div>
+    <button type="submit" class="btn btn-success">Submit Application</button>
+</form>
+{% endblock %}

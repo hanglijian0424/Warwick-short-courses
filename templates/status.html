@@ -1,0 +1,19 @@
+<!-- status.html: Student check status page --><!-- Chatgpt generated -->
+{% extends "base.html" %}
+{% block title %}Your Application{% endblock %}
+{% block content %}
+<h2 class="mb-4">Application Status</h2>
+
+{% if error %}
+    <div class="alert alert-warning">{{ error }}</div>
+{% else %}
+    <p><strong>Name:</strong> {{ app[0] }}</p>
+    <p><strong>Course:</strong> {{ app[1] }}</p>
+    <p><strong>Statement:</strong> {{ app[2] }}</p>
+    <p><strong>Submitted:</strong> {{ app[3] }}</p>
+    <p><strong>Status:</strong> {{ app[4] }}</p>
+    <hr>
+    <p>If you wish to update your application:</p>
+    <a href="/apply" class="btn btn-secondary">Submit a New Application</a>
+{% endif %}
+{% endblock %}
