@@ -14,11 +14,10 @@ This is a lightweight Flask-based web application for managing short course appl
 │   ├── dashboard.html
 │   └── ...
 ├── static/                 # Static assets (images, CSS)
-│   ├── img/
 │   │   ├── ai.jpg
 │   │   ├── business.jpg
 │   │   └── climate.jpg
-│   └── style.css
+│   │   └── style.css
 ├── test/                   # Unit tests
 │   └── test_app.py
 └── README.md               # Project description and structure
