@@ -1,2 +1,2 @@
 # Warwick-short-courses
-Code of student project for teacher to read
+Code of Lijian Hang's project for teacher to read
